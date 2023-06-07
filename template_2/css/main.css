@@ -1,0 +1,225 @@
+/* CSS Document for Screens */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px; /* base font */
+    font-weight: 300;
+    color: #5C5C5C;
+    margin:0;
+    padding: 0;
+    border-top: #c3d021 solid .5em;
+}
+
+/* Text */
+h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700; }
+h2 { margin: 0 0 .5em 0; font-size: 1.6em; font-weight: 700; line-height: 1.1em; }
+h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 600; color: #001894; }
+h4 { margin: 0 0 1.5em 0; font-size: 1em; font-weight: 700; }
+p { margin: 0 0 1em 0; }
+a { color: #007eff; }
+a:visited { color: #65b1ff; }
+
+/* Global Classes */
+.btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: .8em;
+    background: #9d9d9d;
+    padding: 5px 10px;
+}
+
+.btn-large {
+    font-size: 1em;
+    padding: 5px 30px;
+}
+
+.btn-primary {
+    background-color: #162992;
+}
+
+#page {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Header */
+header {
+    height: 450px;
+    background: #fff url(../images/cpa_banner_1200.jpg) no-repeat center center;
+    position: relative;
+}
+
+header a.logo {
+    z-index: 1;
+    color: #c3d021;
+    position: absolute;
+    font-size: 1.9em;
+    text-decoration: none;
+    letter-spacing: 0em;
+    top: 20px;
+    left: 20px;
+}
+
+header .fgColor{
+    color: #fff;
+}
+
+/* Section */
+section { padding: 0 30px; }
+section::after { content: '';display: block;clear: both; }
+
+/* Section - main */
+section.main {
+   margin-top: 10px; margin-bottom: 20px;
+}
+
+section.main aside {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+section.main .content {
+    margin: 15px;
+    background: no-repeat;
+    background-size: 65px 65px;
+    background-position: 50% 15%;
+    background-color:  #c3d021;
+    border-radius: 10px;
+    min-height: 235px;
+    padding: 150px 10px 0 10px;
+}
+
+section.main aside h2 { color: #162992; }
+
+section.main aside .content.tax-consultation { background-image: url(../images/coin.svg); }
+section.main aside .content.accounting { background-image: url(../images/calculator.svg); }
+section.main aside .content.financial-audits { background-image: url(../images/objective.svg); }
+
+/* Section - quote */
+section.quote h2 { color: #5C5C5C !important; font-family: 'Comic Sans MS' !important;}
+
+/* Section -  info */
+section.info { margin-top: 20px; }
+
+section.info .content { padding-right: 10px; }
+
+section.info aside .content.intro { width: 60%; float: left; }
+section.info aside .content.intro p { color: #001894; font-size: 1.25em; }
+
+section.info aside .content.contact-us span { font-size: .9em; }
+section.info aside .content.contact-us span::after {
+    content: '\A'; display: block;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(0,0,0,.65);
+    /*position: absolute;*/
+    position: relative;
+    top: 0; left: 0;
+    padding: 15px 0;
+    width: 100%;
+}
+
+nav a.mobile_menu {
+    width: 32px; height: 32px;
+    background: url(../images/icon_menu.svg) no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    top: 23px; right: 5px; margin-left: -16px;
+    display: none;
+}
+
+nav::after { content:'';display: block; clear: both; }
+
+nav ul { list-style: none; margin: 0; padding: 0; }
+
+nav ul li a {
+    display: inline-block;
+    color: #fff !important;
+    padding: 15px 0 0 0 ;
+    text-decoration: none;
+    text-align: center;
+    width: 125px;
+    position: relative;
+}
+
+nav ul li a:hover { color: #c3d021 !important; }
+
+/* Top Level Element */
+
+nav > ul { padding-left: 400px; }
+nav > ul > li { float: left; }
+
+/* Footer */
+footer { text-align: center; color: #9d9d9d; line-height:5em; }
+
+@media screen and (max-width: 1260px) {
+
+    h1 { font-size: 2.4em; }
+    section.main aside { width: 30%; }
+    nav ul li{ text-align: left;}
+    nav ul li a {
+        padding: 0;
+    }
+    nav > ul { padding-left: 0px; }
+    nav > ul { padding: 0; }
+    nav > ul > li { margin-top: 45px;}
+
+}
+
+@media screen and (max-width: 770px) {
+    header { /*height: 350px;*/ /*width: auto;*/ background-position: 0 60px;background-size: 750px 450px; }
+    section.main { width: 75%; }
+    section.main .content {
+        margin: 15px;
+        min-height: 180px;
+        padding: 135px 10px 0 10px;
+    }
+
+    /* Navigation */
+
+    nav {
+        /*position: static;*/position: absolute;
+        /*width: auto;*/
+        padding: 5px 0;
+        /*margin-top:1em ;*/
+        background-color: #000;
+    }
+    nav a.mobile_menu { display: block; }
+    nav ul {  margin-top: 50px; height: 0px; overflow: hidden;}
+    nav ul li a {
+        display: block;
+        text-align: left;
+        width: auto;
+        padding: 5px 15px;
+    }
+    nav ul li a:hover { background: #c3d021;color: #fff !important; }
+    nav ul,
+    nav ul ul,
+    nav ul ul ul { display: block; position: static; bottom: 0; }
+    nav > ul > li { float: none; margin-top: 15px;}
+
+    section.main aside {
+        width: 45%;
+    }
+    /* Footer */
+    footer { font-size: .6em }
+}
+
+@media screen and (max-width: 525px) {
+    header{ background-size: 500px 350px;}
+
+    header a.logo{
+        font-size: 1.4em;
+    }
+
+    section.main aside {
+        width: 100%;
+    }
+    section.info aside .content.intro { width: 100%; }
+}

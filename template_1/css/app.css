@@ -1,0 +1,106 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px; /* base font */
+	font-weight: 300;
+	color: #555;
+	margin:0;
+	padding: 0;
+}
+
+.theme-color {
+	color: #f38142 !important;
+}
+
+.nav-link {
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding-right: 6rem !important;
+}
+
+section::after { 
+	content:'';
+	display: block;
+	clear: both;
+}
+
+section .banner {
+	border-bottom: solid 5px #f38142;
+}
+
+section .banner > div {
+	height: 550px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+section .ship-banner {
+	background-repeat: no-repeat;
+	background-image: url(../images/ship_banner.webp);
+	background-position: bottom right;
+	background-size: cover;
+	width: 100%;
+}
+
+section.about-us .ship-banner {
+	background-repeat: no-repeat;
+	background-image: url(../images/about.webp);
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+}
+
+section.pricing .ship-banner {
+	background-repeat: no-repeat;
+	background-image: url(../images/large_service.webp);
+	background-position: bottom right;
+	background-size: cover;
+	width: 100%;
+}
+
+section.contact-us .ship-banner {
+	background-repeat: no-repeat;
+	background-image: url(../images/contact-us.webp);
+	background-position:center center;
+	background-size: cover;
+	width: 100%;
+}
+
+section .carousel-caption {
+	width: 600px;
+	text-align: left;
+	left: 3.5% !important;
+	background: #000;
+	opacity: 0.5;
+	padding-left: 10px !important;
+}
+
+section .container {
+	padding-top: 10px;
+}
+
+section.home .more-topics > div {
+	margin: 2px 2px;
+}
+
+section.feature {
+	background: #f38142;
+	opacity: 0.5;
+}
+
+section .container .page-header {
+	font-size: 1.25rem;
+}
+
+/* Footer */
+footer {
+  height: 65px;
+  background: #ddd;
+}
+
+footer .content {
+  font-size: .8em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  padding-top: 30px;
+}
